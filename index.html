@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ГРУ: ВЬЮГА</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="overlay scanlines"></div>
+    <div class="overlay noise"></div>
+    <div class="vignette"></div>
+
+    <div id="game-container">
+        
+        <div id="start-screen" class="screen active">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="СИСТЕМА НАВЕДЕНИЯ">СИСТЕМА НАВЕДЕНИЯ</h1>
+                <h2 class="sub-glitch">ПРОТОКОЛ: "ВЬЮГА"</h2>
+            </div>
+            <div class="briefing">
+                <p>> ВХОДЯЩЕЕ ШИФРОВАНИЕ...</p>
+                <p>> ОТ: КАПИТАН ГРУ СНЕГУРОЧКА</p>
+                <p>> ЗАДАЧА: ЗАЧИСТИТЬ СЕКТОР ПЕРЕД ВЫСАДКОЙ.</p>
+                <p class="warning">ЦЕЛИ: 💂 ДИВЕРСАНТЫ | 💣 МИНЫ</p>
+                <p class="safe">НЕ ТРОГАТЬ: 🎅 САНТУ | 🦌 ОЛЕНЕЙ</p>
+            </div>
+            <button id="start-btn" class="military-btn">НАЧАТЬ ОПЕРАЦИЮ</button>
+        </div>
+
+        <div id="game-ui" class="screen">
+            <div class="hud-top">
+                <div class="score-box">ЛИКВИДИРОВАНО: <span id="score">0</span></div>
+                <div class="time-box">ВРЕМЯ: <span id="timer">45</span></div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div class="crosshair"></div>
+        </div>
+
+        <div id="game-over-screen" class="screen">
+            <h1 id="end-title">СВЯЗЬ ПОТЕРЯНА</h1>
+            <p id="end-reason">...</p>
+            <p class="final-score">ИТОГОВЫЙ СЧЕТ: <span id="final-score-val">0</span></p>
+            <div id="success-msg" class="hidden">
+                <p>> ДОСТУП К АРЕНЕ РАЗРЕШЕН.</p>
+                <p>> КОД ДОСТУПА: <strong>LASER-2025</strong></p>
+            </div>
+            <button id="restart-btn" class="military-btn">ПЕРЕЗАГРУЗКА СИСТЕМЫ</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
